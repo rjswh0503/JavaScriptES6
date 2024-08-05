@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var 변수 = '신재헌';
+        var 문자 = `안녕하세요 저는 ${변수} 입니다.`;
+
+        // tagged literal 
+
+        function 해체분석기(문자들,변수들){
+            console.log( 문자들[1] + 변수들 + 문자들[0]);
+            
+           
+            
+        }
+
+        해체분석기 `안녕하세요 저는 ${변수} 입니다.`;
+        */
+
+        var pants = 0;
+        var socks = 0;
+
+        
+
+           function 해체분석기(글자들, 변수1, 변수2){
+            
+            
+
+           }
+        
+
+        해체분석기 ` 바지${pants}양말${socks} `;
+
+
+        var 어레이 = ['hello','world'];
+
+        console.log(...어레이);
+
+        var 문자 = 'hello';
+        console.log(...문자);
+        
+        // spread operator 는 대괄호를 없애주는 것
+
+        // 문자도 array 처럼 인덱싱 사용 가능하다.
+
+
+        /*
+        var a = [1,2,3];
+        var b = [4,5];
+
+        var c = [...a, ...b];
+        */
+
+        /*
+        var a = [1,2,3];
+        
+        //  var b = a; 이렇게 복사하게 되면 값도 공유하기 때문에 a 추가를 하면 b에도 똑같이 추가가 된다.
+
+        var b = [...a]; 
+        // 하지만 var b = [...a] 복사를 하면 독립된 값을 가지게 된다.
+        // ... spread operator  보통 obj array 딥카피를 할 떄 사용한다.
+        // reference data type = array, object
+           // ...은 {} [] 함수()안에서만 사용이 가능하다.
+        
+        a[3] = 4;
+        console.log(a);
+        console.log(b);
+        */
+
+    
+        // spread operator 실습문제 1
+        const fruits = ['사과','바나나'];
+        const vegetables = ['당근','브로콜리'];
+        const combined = [...fruits, ...vegetables];
+        console.log(combined);
+
+
+        // spread operator 실습문제 2
+
+        const person = { name: '김철수', age: 30 };
+        const job = { title: '개발자', company: 'Tech Co.' };
+
+        // 여기에 코드를 작성하세요
+        const profile = {...person, ...job}
+
+        console.log(profile);
+
+        // spread operator 실습문제 3
+
+            const numbers = [1, 2, 3, 4];
+
+            // 여기에 코드를 작성하세요
+            const newNumbers = [...numbers, 5,6]
+
+            console.log(newNumbers);
+
+        
+           // spread operator 실습문제 4
+
+           function sum(a, b, c) {
+            return a + b + c;
+            }
+
+            const number = [1, 2, 3];
+
+            // 여기에 코드를 작성하세요
+            const result = sum(...number);
+
+            console.log(result);
+        
+
+
+            // 3번째 용도
+
+             function 더하기(a,b,c){
+                console.log(a  + b + c)
+             }
+
+             더하기(1,2,3);
+
+
+              var person1 = {
+                인사 : function(){
+                    console.log(this.name + '안녕');
+                }
+              }
+
+              var person2 = {
+                name : '손흥민'
+              }
+
+              person1.인사.apply(person2);
+
+
+
+    </script>
+</body>
+</html>

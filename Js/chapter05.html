@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Sticky.css">
+</head>
+<body style="background : grey; height : 3000px">
+
+    <div class="grey">
+      <div class="image">
+        <img src="/appletv.jpg" width="100%">
+      </div>
+    
+      <div style="clear : both"></div>
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio cupiditate ratione sunt reiciendis possimus fugiat provident repellat rerum id quis blanditiis 
+            ullam alias, at non, placeat molestias officia 
+            aperiam!
+        </div>
+        <div style="clear : both"></div>
+        <div class="text" style="margin-top: 300px;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio cupiditate ratione sunt reiciendis possimus fugiat provident repellat rerum id quis blanditiis 
+            ullam alias, at non, placeat molestias officia 
+            aperiam!
+        </div>
+    </div>
+
+        <script>
+            $(window).scroll(function(){
+                var 현재위치 = $(window).scrollTop();
+                console.log(현재위치);
+
+                if(현재위치 > 525){
+                    $('.image').addClass('big');
+                } else if(현재위치 <= 392){
+                    $('.image').removeClass('big');
+                }
+            })
+        </script>
+    
+    </body>
+</html>

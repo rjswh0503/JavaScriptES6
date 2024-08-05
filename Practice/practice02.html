@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1. 배열의 모든 요소 출력하기
+        const fruits = ["appel","banana","cherry","date"];
+
+        fruits.forEach((a, i) => {
+            console.log(fruits[i]);
+        })
+
+
+        // 2. 배열 요소의 길이 출력하기
+
+        const animals = ["elephant","tiger","cat","dog"];
+
+        animals.forEach((a, i) => {
+            console.log( animals[i] +"의 요소의 길이 " +  animals[i].length);
+        })
+
+
+        // 3. 배열 요소의 제곱 값 구하기 
+
+        const numbers = [1,2,3,4,5];
+
+       var NewNumber =  numbers.map(function(a){
+            return a * 2;
+
+            
+        })
+        console.log(NewNumber);
+
+        // 4. 특정 조건을 만족하는 요소 찾기
+
+        const words = ["tree","house","car","bicycle","window"];
+
+        var newWords = words.filter(function(a, i){
+           return words[i].length > 4;
+            
+        })
+
+        console.log(newWords);
+
+
+        // 5. 객체 배열의 특정 속성 합계 구하기
+        
+        const people = [
+        { name: "John", age: 25 },
+        { name: "Jane", age: 30 },
+        { name: "Jim", age: 35 },
+        { name: "Jill", age: 40 }
+        ];
+
+        var newPeople = people.map(function(a){
+            return a.age 
+        })
+        
+        console.log(newPeople)
+
+
+
+
+        // 9. 배열 요소 필터링하기
+
+        const number = [1,2,3,4,5,6,7,8,9,10];
+
+        var newNumber = number.filter(function(a){
+            return a %2 === 0;
+        })
+
+        console.log(newNumber);
+
+
+        // 10. 객체 배열에서 특정 속성 추출하기 (name)
+        
+        const users = [
+        { id: 1, name: "Alice" },
+        { id: 2, name: "Bob" },
+        { id: 3, name: "Charlie" },
+        { id: 4, name: "Dave" }
+        ];
+
+        var newUser = users.map(function(a){
+            return a.name;
+        })
+
+        console.log(newUser)
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

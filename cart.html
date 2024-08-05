@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cart">장바구니 페이지</div>
+    
+
+
+        <script>
+            var cartItem = JSON.parse(localStorage.getItem('cart'));
+          
+            cartItem.forEach((cart) => {
+            var 템플릿 = `
+                <div class="cart-item">
+                    <p>${cart}</p>
+                </div>
+            `;
+            $('.cart').append(템플릿);
+              // 템플릿을 '.cart' 요소에 추가합니다.
+        });
+        console.log(cartItem);
+
+        
+        </script>
+
+
+
+
+</body>
+
+    
+</html>

@@ -1,0 +1,55 @@
+body {
+    background-color: gainsboro;
+}
+
+
+.search-input {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+
+.cart-btn {
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.products-card {
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+}
+
+
+.products-container {
+    height: 500px;
+}
+
+.cart-container {
+    height: 380px;
+    width: 1200px;
+    margin-left: 28px;
+    background-color: gray;
+}
+
+.cart {
+    background-color: black;
+    height: 300px;
+    width: 1100px;
+    margin-left: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 120px;
+    
+}
+
+
+.highlight {
+    background-color: yellow;
+}

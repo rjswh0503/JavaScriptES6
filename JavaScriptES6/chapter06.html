@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var 이름1 = {name : '김'};
+
+        function 변경(obj){
+          obj = {name: 'Park'};
+        }
+
+        변경(이름1);
+        console.log(이름1);
+
+        // 이름1 - name: Park x 
+
+        // 이름1  -> name: 김
+
+        // obj  -> name: Park
+
+        // obj는 name: Park 이라는 새로운 화살표를 재할당한 것
+        // 이름1이라는 변수는 전혀 건드리고 있지 않기 때문에 이름1의 이름이 바뀌지 않는 것
+
+
+        // 이름2 ----> {name: '김'} 
+
+        var 이름2 = {name : '김'};
+                    //이름2
+        function 변경(obj1){
+            obj1.name = 'park'
+        }
+        변경(이름2);
+        console.log(이름2);
+
+        
+    
+    
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        
+        //for in 반복문 object에 있던 값을 전부 하나씩 꺼내서 사용할 때
+
+       // var 오브젝트 = {name: 'kim', age: 30};
+
+       /*
+        for (var key in 오브젝트){
+        
+            console.log(오브젝트[key]);
+           
+            
+        }
+        */
+
+
+        /*
+        var 어레이 = [2,3,4,5];
+
+        for(var 자료 of 어레이){
+            console.log(자료);
+
+        }
+
+        어레이[Symbol.iterator]();
+        */
+
+
+        // 심볼 object 자료형의 비밀스런 key값
+
+        /*
+        var 심볼 = Symbol('dddd');
+
+        var weight = Symbol('내 비밀 몸무게');
+        
+        var height = Symbol('내 비밀 키');
+
+        var person = {
+            name: 'kim'
+        }
+
+        person.weight = 100;
+        person[weight] = 200; // (enumerable X)열거x 이기 때문에 반복문에서 출력이 안된다.
+        person.height = 177;
+        person[height] = 176.7;
+
+        for (var key in person){
+            console.log(person[key]);
+        }
+
+        
+        */
+
+        /*
+        const globalSym1 = Symbol.for('globalSymbol');
+        const globalSym2 = Symbol.for('globalSymbol');
+        // Symbol.for(key) 동일한 키로 생성된 Symbol은 같기 때문에 
+        // 출력시 true가 나온다. 
+
+        // Symbol.for를 사용하지 않으면 동일한 키로 생성된 Symbol이 아니기 때문에
+        // false가 나온다. 
+
+        console.log(globalSym1 === globalSym2); // true (동일한 Symbol)
+
+        // Symbol.keyFor를 사용하여 전역 Symbol의 키를 얻을 수 있습니다.
+        const key = Symbol.keyFor(globalSym1);
+        console.log(key); // globalSymbol
+        */
+
+        // Map  => 
+        // Map 자료형은 자료간의 연관성을 표현하기 위해 씀
+        // 기존 object에서 불가능한 key 값에 숫자, 배열 사용 가능
+
+
+        /*
+        var person = new Map();
+
+        person.set([1,2,3],'kim');
+        person.set('age',20);
+
+
+        // 자료 꺼내는 법
+        //person.get('age'); 
+
+        //자료 삭제하는 법
+
+        //person.delete('age');
+
+        // 자료 갯수 세는 법
+        //person.size;
+
+
+        for(var key of person.keys()){
+            console.log(key);
+        }
+
+        // Map 자료형에 직접 자료 집어넣을 땐
+
+        var person = new Map([
+            ['name','kim'],
+            ['age',20]
+        ]);
+        */
+
+        // Set 자료형
+
+        // Set은 중복자료를 허용하지 않는 Array 비슷한 것
+    
+        /*
+        var 출석부 = ['john','tom','andy','tom'];
+
+        
+        var 출석부2 = new Set(['john','tom','andy','tom']);
+        
+        출석부 = [...출석부2];
+
+        
+        출석부2.add('Json') // 추가하기
+        출석부2.has('Json') // 몇개 들어있는지 확인
+        출석부2.delete('Json') // 삭제하기
+        */
+
+        
+
+
+    </script>
+</body>
+</html>

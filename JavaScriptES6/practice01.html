@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="버튼">버튼</button>
+
+    <script>
+
+
+        // this arrow function 실습문제 1
+        var 사람 = {
+            name: '손흥민',
+            sayHi: function(){
+                console.log('안녕 나는 ' + this.name)
+            }
+        }
+
+        사람.sayHi();
+
+
+
+        // 실습문제 2
+
+        var 자료 = {
+            data : [1,2,3,4,5]
+        }
+
+        자료.전부더하기 = function(){
+            var sum = 0;
+            
+            this.data.forEach(function(a) {
+                sum = sum + a;
+            })
+            console.log(sum);
+        }
+        자료.전부더하기();
+
+
+        // 실습문제 3 
+
+        document.getElementById('버튼').addEventListener('click', function(){
+            
+            setTimeout(() =>{
+                console.log(this.innerHTML);
+            }, 1000)
+        })
+
+
+        
+
+
+
+
+
+    
+
+        
+        
+
+
+    
+       
+
+
+
+
+    </script>
+</body>
+</html>

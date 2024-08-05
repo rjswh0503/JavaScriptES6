@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body class="dark">
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <span class="navbar-brand">JSShop</span>
+          <span id="badge" class="badge bg-dark">Dark🔄</span>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav> 
+
+    
+
+    <div class="black-bg">
+        <div class="white-bg">
+        <h4 class="login">로그인하세요</h4>
+        <form action="success.html">
+            <div class="my-3">
+              <input id="email" type="text" class="form-control">
+             </div>
+             <div class="my-3">
+               <input id="password" type="password" class="form-control">
+             </div>
+             <button id="send" type="submit" class="btn btn-primary">전송</button>
+             <button type="button" class="btn btn-danger" id="close">닫기</button>
+          </form> 
+        </div>
+    </div> 
+    
+    <div class="main-bg">
+        <h4>Shirts on Sale</h4>
+            <button class="btn btn-primary" id="modal-btn">로그인</button>
+    </div>
+
+    <div class="alert alert-success">
+        <span class="count">10</span>초 이내 구매시 사은품 증정!
+
+    </div>
+
+
+    <div style="overflow: hidden;">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img  src="car1.png">
+            </div>
+            <div class="slide-box">
+                <img  src="car2.png">
+            </div>
+            <div  class="slide-box">
+                <img  src="car3.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-btn">
+        <img  class="slide-before" src="https://img.icons8.com/color/48/previous.png" alt="previous"/>
+        <img  class="slide-1" src="https://img.icons8.com/color/48/1-c.png" alt="1-c"/>
+        <img  class="slide-2" src="https://img.icons8.com/color/48/2-c.png" alt="2-c"/>
+        <img  class="slide-3" src="https://img.icons8.com/color/48/3-c.png" alt="3-c"/>
+        <img  class="slide-next" src="https://img.icons8.com/color/48/next.png" alt="next"/>
+    </div>  
+
+
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing 
+        elit. Tempore sint doloribus adipisci laborum nostrum dolores et aut nobis 
+        distinctio repudiandae fuga necessitatibus accusamus dolorum expedita, 
+        libero voluptas placeat soluta minima.
+    </div>
+
+
+
+    <div style="height: 1000px;">
+
+    </div>
+
+
+
+    
+
+
+
+    
+
+    
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+        <script>
+            $('.lorem').on('scroll', function(){
+              var 스크롤양 =  document.querySelector('.lorem').scrollTop;
+              var 실제높이 =  document.querySelector('.lorem').scrollHeight;
+              var 높이 =  document.querySelector('.lorem').clientHeight;
+
+              var 종합 = 스크롤양 + 높이;
+
+              if(종합 == 실제높이){
+                alert(' 약관동의 완료');
+              }
+              
+              
+            })
+
+
+
+
+
+
+
+        </script>
+
+        <script>
+            $(window).on('scroll', function(){
+                    if(window.scrollY > 100){
+                    $('.navbar-brand').css('font-size', '20px');
+
+                    }else{
+                        $('.navbar-brand').css('font-size','30px');
+                    }
+
+                    console.log(window.scrollY);
+            })
+
+
+
+
+            
+
+    
+        </script>
+
+      
+
+
+
+        <script>
+
+
+                // 다음버튼 누르면 지금 보이는 사진이 1이면 2번사진 보여주세요.
+                //  다음버튼 누르면 지금 보이는 사진이 2이면 3번사진 보여주세요.
+
+                var 지금사진 = 1;
+                var 지금사진1 = 3;
+
+
+                $('.slide-next').on('click', function(){
+                    if(지금사진 == 1){
+                        $('.slide-container').css('transform','translateX(-100vw)');
+                        지금사진 += 1;
+                    } else if(지금사진 == 2){
+                        $('.slide-container').css('transform', 'translateX(-200vw)');
+                      
+                    } 
+
+                })
+
+
+                
+
+                $('.slide-before').on('click', function(){
+                    if(지금사진1== 3){
+                        $('.slide-container').css('transform','translateX(-100vw)');
+                        지금사진1 -= 1;
+                    } else if(지금사진1 == 2){
+                        $('.slide-container').css('transform','translateX(0vw)');
+                    }
+                })
+
+
+
+
+                function 함수(a,b){
+                    var result = a * 0.9
+                    if(b == true){
+                        result = result - 1.5;
+
+                    }
+                    return parseFloat(result.toFixed(2));
+                }
+
+                console.log(함수(30.5, true));
+
+
+
+                
+
+            
+
+
+
+
+        
+
+
+               
+
+
+
+            
+
+
+            $('.slide-1').on('click', function(){
+                $('.slide-container').css('transform','translateX(0vw)')
+            })
+
+            $('.slide-2').on('click', function(){
+                $('.slide-container').css('transform','translateX(-100vw)');
+            })
+            $('.slide-3').on('click', function(){
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+            })
+
+            
+
+
+        </script>
+
+
+      <script>
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+    
+
+        var count = 0;
+        $('.badge').on('click', function(){
+            
+            count = count + 1;
+            
+            if(count %2 == 1){
+                $('.badge').html('Light🔄').removeClass('bg-dark')
+                
+            }else if(count %2 == 0) {
+                $('.badge').html('Dark🔄').addClass('bg-dark')
+                
+            }
+            //console.log(count);
+
+        });
+
+
+        $('.badge').on('click', function(){
+            $('body').toggleClass('white')
+            
+        })
+
+
+        
+
+        
+        
+
+        
+
+        // var let const 차이
+        
+        //var = 재할당 재선언 가능
+
+        //let = 재할당 가능 재선언 불가능
+
+        //const = 재할당 재선언 둘 다 불가능  (상수)
+
+
+        
+        
+        var name = 'shin'
+        var id = 0;
+
+        function showName(){
+            var name = 'park'
+            var id = 1;
+            //console.log(name);
+        }
+
+
+        showName();
+        //console.log(id);
+
+
+        var 예금액 =60000;
+        var 미래예금액 = 0;
+        
+        if(예금액 > 50000){
+            미래예금액 = 예금액 * 1.20 * 1.20;
+        }else if(예금액 < 50000){
+            미래예금액 = 예금액 * 1.15 * 1.15;
+        }
+
+
+        console.log(미래예금액 + "원");
+
+
+        
+        var first = 360;
+        var total = 0;
+
+
+        total = first + first * 2 / 3 + first * 2 / 3 * 2 / 3
+
+
+
+        console.log(total);
+
+
+
+
+        
+        
+
+
+    </script>
+
+
+
+        <script>
+
+            $('#modal-btn').on('click', function(){
+                $('.black-bg').addClass('show-modal')
+            })
+
+            $('#close').on('click', function(){
+                $('.black-bg').removeClass('show-modal');
+            })
+
+
+            
+        </script>
+
+        <script>
+
+
+            //3의 배수에서 박수를 치면 되는 게임 
+
+
+
+            function 삼육구게임(a){
+                if(a %3 == 0){
+                    //console.log('박수')
+                } else {
+                   // console.log('통과')
+                }
+
+            }
+
+            삼육구게임(15);
+
+            function 이의배수(two){
+                if(two %4 == 0){
+                  //  console.log('박수4번');
+                }else if(two %2 ==0) {
+                  //  console.log('박수2번');
+                }else{
+                   // console.log('통과');
+                }
+
+            }
+
+            이의배수(22);
+
+
+            function 구의배수(nine){
+                if(nine %9 == 0){
+                   // console.log('박수 2번');
+
+                }else if(nine %3 == 0){
+                   // console.log('박수 1번');
+                } else{
+                   // console.log('통과');
+                }
+            }
+
+
+            구의배수(40);
+
+
+            function 합격했냐(a,b){
+                 if(a > 100 || b > 100 ){
+                    alert('장난치지마라');
+                }
+                else if(a < 40 || b < 40){
+                   // console.log('불합격');
+                }else if(a + b >= 120){
+                   // console.log('합격');
+                }else if(a + b < 120){
+                  // console.log('불합격');
+                }
+                
+            }
+
+            합격했냐(90,60);
+
+
+
+            
+            function 삼육구(a){
+                if(a %10 == 3 || a %10 == 6 || a %10 == 9){
+                   // console.log('짝');
+                }
+            }
+
+            삼육구(39);
+
+
+
+
+
+
+            
+            
+
+            document.getElementById('email').addEventListener('input', function(){
+               // console.log('안녕');
+            })
+
+
+            $('form').on('submit', function(e){
+
+                var 이메일 = document.getElementById('email').value;
+                var 비밀번호 = document.getElementById('password').value;
+                var 대문자 = /[A-Z]/;
+
+                if( /\S+@\S+.\S+/.test(이메일)  == ''){
+                    alert('이메일 형식이 아닙니다.');
+                    e.preventDefault();
+                }else if(대문자.test(비밀번호) == ''){
+                    alert('대문자 1개 포함해주세요.');
+                    e.preventDefault();
+                }
+            })
+
+            
+
+           
+
+
+
+
+            
+        </script>
+
+
+
+        <script>
+
+            var count = 10;
+
+            setInterval(function(){
+                count = count - 1;
+                if(count >= 0){
+                    document.querySelector('.count').innerHTML = count;
+                    if(count == 0){
+                        $('.alert').fadeOut();
+                    }
+                     
+                }
+
+                
+        
+            },1000)
+
+
+        </script>
+
+
+        
+
+  </body>
+</html>

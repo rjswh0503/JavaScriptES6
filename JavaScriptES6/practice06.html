@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        for(var i = 2; i <=9; i++){
+            for(var j = 1; j <=9; j++){
+                console.log(i + " * " + j + " = " + i * j);
+            }
+        }
+
+        var 오브젝트 = {
+            name: 'kim',
+            age: 30,
+        }
+
+
+        for(var key in 오브젝트){
+            if(오브젝트.hasOwnProperty(key)){
+                console.log(`${key} : ${오브젝트[key]}`)
+            }
+        }
+
+        
+    </script>
+    
+</body>
+</html>

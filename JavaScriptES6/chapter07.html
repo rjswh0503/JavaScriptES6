@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+            var 학생1 = {
+                name: 'kim',
+                age: 15,
+                sayHi : function(){
+                    //console.log('안녕하세요' + this.name + '입니다.');
+                    // this는 내 obejct안에 있는 주인님 
+                }
+            }
+
+            학생1.sayHi();
+
+        // constructor 생성자
+        // this는 새로 생성되는 object를 뜻함
+
+        // this 기계에서 새로 생성되는 object (instance)
+        // 기계 : object생성기계(constructor 생성자)
+        function Student(name, age){
+            this.name = name;
+            this.age = age;
+            this.sayHi = function(){
+                console.log('안녕하세요' + this.name + '입니다.');
+            }
+
+        }
+                        // key    value
+        Student.prototype.gender = '남';
+
+
+        // prototype은 js에서만 있음
+        //prototype은 유전자이다.
+        // constructor를 만들면 prototype이라는 공간이 자동으로 생김
+        // prototype에 값을 추가하면 모든 자식들이 물려받기 가능
+        // 내가 gender가 없으면 부모.prototype에 물어봐서 있으면 사요ㅕㅇ 가능 
+
+        
+        
+
+        
+
+        var 학생1 = new Student('park',25);
+        var 학생2 = new Student('shin',30);
+
+
+        var arr = [1,2,3];
+
+        var arr = new Array(1,2,3);
+
+        
+
+        // constructor 생성자 실습문제 1
+
+        function Products(name, price){
+            this.name = name;
+            this.price  = price;
+            this.부가세 = function(){
+                
+                console.log('가격은 ' + this.price + ' 부가세 :' +this.price * 0.1);
+            }
+
+        }
+
+        var 상품1 = new Products('shirts',50000);
+        var 상품2 = new Products('pants',60000);
+
+        상품1.부가세();
+        상품2.부가세();
+
+
+    // constructor 생성자 실습문제 2
+        function Car(make, model, year){
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.getDescription = function(){
+                console.log('This car is a ' +  this.year  +  this.make +  this.model + '.');
+            }
+            
+        }
+        
+        var myCar = new Car(' Toyota ' , ' Corolla' , 2020);
+            myCar.getDescription();
+
+
+            // 내 부모 유전자를 찾고 싶으면 __proto__ 
+
+        
+
+            
+            function Student1(name, age){
+                this.name = name;
+                this.age = age;
+
+                
+            }
+
+            Student1.prototype.sayHello = function() {
+                    console.log(`안녕 나는 ${this.name} 이야`)
+                }
+
+            var 학생1 = new Student1('Kim', 20);
+            var 학생2 = new Student1('Park', 21);
+            var 학생3 = new Student1('Lee', 22);
+
+            학생1.sayHello();
+            학생2.sayHello();
+            학생3.sayHello();
+
+
+
+
+            
+
+            
+            Array.prototype.remove3 = function(num){
+                for(var i = 0; i < this.length; i++){
+                    if( this[i] === num){
+                        this.splice(i,1);
+                    }
+                }
+            };
+
+            var arr = [1,2,3,4];
+
+            console.log(arr);
+
+            arr.remove3(2);
+
+            console.log(arr);
+
+
+
+
+            //Object.create(프로토타입object);
+            // ES5 방법 상속기능
+            var 부모 = {name : 'kim', age: 50 };
+
+            var 자식 = Object.create(부모);
+
+            자식.age = 25;
+
+            var 손자 = Object.create(자식);
+
+
+
+                // class
+
+                class 부모1 {
+                    constructor(name, age){
+                        this.name = name;
+                        this.age = age;
+                    }
+                    sayHi(){
+                        console.log('hello');
+                    }
+
+                }
+
+                var 자식1 = new 부모1('kim',40);
+                
+                
+
+                // extends  class 상속
+
+                class 할아버지 {
+                    constructor(name){
+                        this.성 = 'shin';
+                        this.이름 = name;
+                    }
+                    sayHi(){
+                        console.log('안녕 저는 할아버지에요');
+                    }
+                }
+
+                // var 할아버지1 = new 할아버지('재헌');
+
+
+                // extends해서 만든 class는 this를 그냥 사용하지 못한다.
+                // 사용할려면 super() 다음에 써야한다.
+                class 아버지 extends 할아버지 {
+                    constructor(name){
+                        super(name);
+                        this.나이 = 50;
+                        
+                    }
+                    sayHi(){
+                        console.log('안녕 저는 아버지에요');
+                        super.sayHi();
+                    }
+                }
+
+
+                var 아버지1 = new 아버지('재만');
+
+            
+
+                // 복잡한 소괄호 보기 싫다면 set / get 키워드 사용
+                // set은 데이터 변경하는 함수에
+                // get은 데이터 꺼내쓰는 함수에
+
+                // get set 키워드 특징
+
+                //get 함수들 (getter) return이 있어야 함
+
+                //set 함수들(Setter) 파라미터가 1개 있어야 함.
+
+                /*
+                var 사람 = {
+                    name: 'Park',
+                    age: 30,
+                    get nextAge(){
+                        return this.age + 1
+                    },
+                    set setAge(나이){
+                        this.age = parseInt(나이);
+                        // parseInt는 문자열을 숫자로 변경 해주는 함수
+                    }
+                }
+
+                사람.setAge = '20';
+                사람.nextAge;
+                */
+
+
+                class 사람 {
+                    constructor(){
+                     this.name = 'park';
+                     this.age = 20;   
+                    }
+                    get nextAge(){
+                        return this.age + 1
+                    }
+
+                     set setAge(나이){
+                        this.age = 나이;
+                    }
+
+                }
+
+                var 사람1 = new 사람();
+
+
+                
+
+                
+
+
+    </script>
+    
+</body>
+</html>

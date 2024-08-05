@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+    
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="p">알림창임</p>
+        <button id="close">닫기</button>
+    </div>
+    <div id="btn3">
+        <button onclick="btn1('아이디를 입력하세요.')">버튼1</button>
+        <button onclick="btn1('비밀번호를 입력하세요.')">버튼2</button>
+    </div>
+    <script>
+
+        // event = 클릭 키입력 스크롤 드래그들을 event라고 함
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+        });
+
+        function btn(btn1){
+            // getElementByClassName 은 뒤에 [0] 인덱스 넣어야 됨
+             document.querySelector('#p').innerHTML = btn1;
+             document.getElementById('alert').style.display = "block";
+
+        }
+
+        //함수에 이벤트리스러 넣어서 btn3 이라는 요소 클릭시 p 태그 내용을 바꿔주고 알랏창 띄워줌
+        function btn1(btn2){
+            document.getElementById('btn3').addEventListener('click', function(){
+            document.querySelector('#p').innerHTML = btn2;
+            document.getElementById('alert').style.display = "block";
+        })
+        }
+        
+
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>

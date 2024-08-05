@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button id="send-answer">제출</button>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+       
+       
+        var count = 0;
+        const 정답 = 1335;
+        $('button').on('click', function(){
+
+            count = count + 1
+
+            if(document.getElementById('answer').value == 정답){
+                alert('정답');
+            }else if(document.getElementById('answer').value == !정답 || count >= 3){
+                alert('멍청이');
+            }
+
+            console.log(count);
+
+        })
+        
+
+        /*
+        var count = 0;
+        
+        $('button').on('click', function(){
+
+            count += 1;
+            var 정답 = document.querySelector('#answer').value;
+
+            if(정답 == '1335'){
+                alert('정답');
+            }else if(count >= 3 && 정답 != '1335'){
+                alert('멍청이')
+            }
+
+            console.log(count)
+        })
+
+        */
+
+
+
+        
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: none">모달창0</div>
+    <div style="display: none">모달창1</div>
+    <div style="display: none">모달창2</div>
+
+    <button>버튼0</button>
+    <button>버튼1</button>
+    <button>버튼2</button>
+
+
+
+    <script>
+
+        var 모달창 = document.querySelectorAll('div');
+        var 버튼들 = document.querySelectorAll('button');
+
+        
+
+
+
+        for(let i = 0; i < 3; i++){
+            버튼들[i].addEventListener('click', function(){
+            모달창[i].style.display = 'block';
+        })
+        }
+
+        // 선언 할당 범위 호이스팅 변수 특징
+
+        // 재선언 재할당 범위 : function안에서만 사용 가능 범위 밖에 사용시 오류
+        // var 이름 = 'kim';
+
+        // 재선언 x 재할당 o
+        //let 이름 = 'kim';
+
+        // 재선언 x 재할당 x 
+       // const 이름 = 'park';
+
+
+       // let const 범위는 {}(중괄호)안에서만 사용
+
+
+       // 변수의 호이스팅 현상
+
+
+       // 전역변수 모든 곳에서 사용 가능한 변수 
+
+       // 지역변수 {} 안에서만 사용할 수 있는 변수
+
+       //함수 선언도 호이스팅 가능
+
+       var 나이; 
+
+        console.log(나이);
+
+         나이 = 30; 
+
+        console.log(나이);
+
+
+        
+       
+        for (let i = 1; i <= 6; i++){
+            setTimeout(function(){
+                console.log(i);
+            }, i*1000);
+        }
+
+        // let const는 호이스팅시 언디파인드 오류 
+        
+        
+
+
+        
+
+        
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

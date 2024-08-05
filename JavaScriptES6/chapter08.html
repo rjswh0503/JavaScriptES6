@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // estructuring  패턴매칭
+
+        var arr = [2,3,4];
+
+        var [a,b,c = 10] = [2,3];
+
+        // default 파라미터 
+
+        // 변수 선언만 하면 undefinde만 나옴
+
+        // object도 가능
+
+        // var obj = {name: 'shin', age: 30};
+
+        // var {name,age} = {name: 'shin', age: 30}
+
+        // var name = 'kim';
+        // var age = 30;
+
+        //  var obj = {name: name, age: age };
+        // var obj = {name, age};
+
+        //함수 파라미터 만들때도 destructuring 문법 사용할 수 있다.
+
+
+
+        var obj = {name: 'kim', age : 30}
+
+            function 함수({name, age}){
+                console.log(name);
+                console.log(age);
+            }
+
+            함수({name: 'kim', age : 30});
+
+
+
+            const colors = ['red', 'blue','pink'];
+
+                // 기본값을 사용한 배열 Destructuring
+                const [primary, secondary, tertiary = 'green'] = ['red','blue','pink'];
+
+                console.log(primary);   
+                console.log(secondary); 
+                console.log(tertiary); 
+
+
+
+                // 자바스크립트는 한 번에 하나의 코드만 실행 가능
+                
+                console.log(1 + 1)
+                setTimeout(function(){
+                    console.log(2 + 2)
+                }, 1000)
+
+                console.log(3 + 3);
+
+                // 자바스크립트는 동기식처리(sync) 
+                // 비동기식 (async)
+                // 한 번에 코드 한 줄씩 차례로 실행
+
+                // 1,2,3 순으로 출력이 된다 동기식
+
+                console.log(1);
+                console.log(2);
+                console.log(3);
+
+
+                console.log(1);
+                setTimeout(function(){ // 자바스크립트가 비동기식처리 도와주는 함수
+                    console.log(2);
+                },1000)
+                
+
+                function 첫째함수(둘째함수){
+                    console.log(1);
+
+                }
+
+
+                function 둘째함수(){
+                    console.log(2);
+                }
+
+                첫째함수(둘째함수);
+
+
+                // 콜백함수는 디자인패턴일 뿐
+
+                // 더 쉽게 쓰기 위한 Promise 패턴
+                // Promise는 성공/실패 판정 기계
+
+                var 프로미스 = new Promise(function(성공, 실패){
+                 setTimeout(function(){
+                    성공();
+                 },1000)
+                });
+
+
+                프로미스.then(function(){
+                    
+                    console.log('성공')
+                }).catch(function(){
+                    console.log('실패');
+                })
+                
+                //Promise의 3가지 상태
+                    // 1. 성공하면 resolved
+                    // 2. 대기중이면 pending
+                    // 3. 실패하면 rejected
+
+                    // fetch();
+
+                
+
+                    
+                
+
+
+
+    </script>
+
+    
+    
+        <!--  export 키워드랑 똑같이 {a,b} 맞춰주면 된다.
+         {}는 export사용할 때 쓴다.  import {} from 
+         export default 는 그냥 import 작명 from
+        -->
+    
+</body>
+</html>

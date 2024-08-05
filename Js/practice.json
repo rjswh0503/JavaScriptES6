@@ -1,0 +1,253 @@
+
+     [
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 340631,
+        "name": "나이키 저스트두잇/퓨추라/러브스우시 반팔티셔츠 6종 택일",
+        "likeCount": 3524,
+        "reviewsCount": 83,
+        "price": 37900,
+        "priceOriginal": 65000,
+        "discountRate": 42,
+        "isDiscounted": true,
+        "brand": {
+          "id": 107,
+          "name": "나이키",
+          "description": "NIKE(나이키)는 토탈 라이프스타일 브랜드로 이미 세계 1위 브랜드로 자리 잡았으며, 다양한 아티스트와 브랜드들과의 컬래버레이션으로 많은 분야에서 활동하며 압도적인 신발 판매량과 더불어 두터운 마니아층을 갖고 있는 브랜드입니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "8ce81449-23d1-4910-af59-a7eca7b5a1c2",
+          "originalWidth": 600,
+          "originalHeight": 600,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 727050,
+        "name": "[단독구성](1+1)4타입 ANAC 아트워크 반팔",
+        "likeCount": 3014,
+        "reviewsCount": 87,
+        "price": 22800,
+        "priceOriginal": 79600,
+        "discountRate": 71,
+        "isDiscounted": true,
+        "brand": {
+          "id": 6549,
+          "name": "어나더아카이브",
+          "description": "어나더 아카이브(another archive)는 또 다른 나 자신의 기록 이라는 ,평범하지만 남들과 다른 나를 표현해나가는 의미를 담고있습니다.\n스트릿 캐주얼 웨어를 기반으로  a moment a instant 라는 슬로건에 맞는, 일상의 순간순간 마다 자신을 표현하는 모든것들을 기록해나가고자 합니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "3d70f461-843b-4ebc-b9af-960abb185c61",
+          "originalWidth": 720,
+          "originalHeight": 720,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 457854,
+        "name": "[나이키] 남성용 NSW 저스트 두 잇 스우쉬 반팔티 4종(AR5006)",
+        "likeCount": 2256,
+        "reviewsCount": 77,
+        "price": 26600,
+        "priceOriginal": 39000,
+        "discountRate": 32,
+        "isDiscounted": true,
+        "brand": {
+          "id": 107,
+          "name": "나이키",
+          "description": "NIKE(나이키)는 토탈 라이프스타일 브랜드로 이미 세계 1위 브랜드로 자리 잡았으며, 다양한 아티스트와 브랜드들과의 컬래버레이션으로 많은 분야에서 활동하며 압도적인 신발 판매량과 더불어 두터운 마니아층을 갖고 있는 브랜드입니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "fde61b2e-8f9e-4d0a-8f8c-aa8527bbc761",
+          "originalWidth": 720,
+          "originalHeight": 720,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 778902,
+        "name": "아디다스 반팔티 GK9639 M SL SJ 티",
+        "likeCount": 4614,
+        "reviewsCount": 91,
+        "price": 20500,
+        "priceOriginal": 26900,
+        "discountRate": 24,
+        "isDiscounted": true,
+        "brand": {
+          "id": 1042,
+          "name": "아디다스",
+          "description": "ADIDAS(아디다스)는 Adolf (Adi) Dassler 라는 사람에 의해 창시되었습니다. 아디 (Adi) 와 그의 형제 루디(Rudi)는 1920년부터 독일의 헤르초게나우라흐(Herzogenaurach)에서 스포츠화를 성공적으로 생산하다 1948년 서로 갈라지면서 루디는 푸마 (Puma) 를, 아디는 아디다스를 형성하게 됩니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "ee389fbd-c2e0-481e-9b84-76ede53a2c7c",
+          "originalWidth": 600,
+          "originalHeight": 600,
+          "__type__": "Picture"
+        },
+        "badges": []
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 388694,
+        "name": "타미힐피거 코어 플래그 반팔티 화이트 / 09T3139-100",
+        "likeCount": 4547,
+        "reviewsCount": 70,
+        "price": 21900,
+        "priceOriginal": 59000,
+        "discountRate": 63,
+        "isDiscounted": true,
+        "brand": {
+          "id": 1653,
+          "name": "타미힐피거",
+          "description": "TOMMY HILFIGER(타미힐피거)는 당신의 라이프 스타일을 제안합니다. 옷에서 패션으로 패션에서 라이프로, 당신의 라이프 스타일을 제안하는 타미힐피거 아메리칸 패션의 상징,클래식부터 캐주얼을 아우르는 다양한 디자인으로 사랑받고 있는 타미힐피거의 벨트를 지금 경험해 보세요.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "c006a4b7-028f-458e-83bc-e221899ee329",
+          "originalWidth": 700,
+          "originalHeight": 700,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 212578,
+        "name": "[칼하트 의류] 포켓 반팔티 15종 / K87",
+        "likeCount": 4982,
+        "reviewsCount": 93,
+        "price": 28900,
+        "priceOriginal": 59000,
+        "discountRate": 51,
+        "isDiscounted": true,
+        "brand": {
+          "id": 2119,
+          "name": "칼하트",
+          "description": "CARHARTT WIP(칼하트 WIP)은 칼하트 USA와는 엄연히 다르며, 유럽에서 전개되는 브랜드입니다. CARHARTT WIP은 소재와 FIT, 다양한 그래픽을 추가하여 유럽 최고의 스트릿웨어 브랜드가 되었습니다. BMX, SKATE, ARTIST 등을 끊임 없이 후원하며 스트리트 웨어로써 입지를 굳혔으며, 데님과 티, 재킷 등 모든 카테고리에서 최고의 제품을 만들어 내고 있습니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "976da209-969c-497d-9f62-b1f383621ae8",
+          "originalWidth": 700,
+          "originalHeight": 700,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 227137,
+        "name": "[1+1] OPWEE 반팔 티셔츠 3종 (택2)",
+        "likeCount": 4328,
+        "reviewsCount": 94,
+        "price": 22900,
+        "priceOriginal": 76000,
+        "discountRate": 70,
+        "isDiscounted": true,
+        "brand": {
+          "id": 4229,
+          "name": "오프위",
+          "description": "OPWEE(오프위)는 'Wee Optical art(아주 작은 시각적인 예술)' 와 'only for girls!'라는 슬로건 아래,\n오직 소녀들만을 위한 위트 있는 디자인으로 접근하여 새로운 시대의 활기참과 젊은 감성을 대변하는 창의적인 브랜드입니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "ad239db1-a9a4-45cb-a61d-d3cc4b99621f",
+          "originalWidth": 700,
+          "originalHeight": 700,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 748603,
+        "name": "언더아머 UA 스포츠스타일 로고 반팔티 K 블랙 1363282-001",
+        "likeCount": 2661,
+        "reviewsCount": 70,
+        "price": 23800,
+        "priceOriginal": 39000,
+        "discountRate": 39,
+        "isDiscounted": true,
+        "brand": {
+          "id": 2915,
+          "name": "언더아머",
+          "description": "",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "f615c3c8-102b-4742-b02b-bee1f0a73113",
+          "originalWidth": 600,
+          "originalHeight": 600,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 686107,
+        "name": "나이키 스우시 데일리 반팔티 반바지 긴팔티 모자 모음전",
+        "likeCount": 11087,
+        "reviewsCount": 72,
+        "price": 19900,
+        "priceOriginal": 100000,
+        "discountRate": 80,
+        "isDiscounted": true,
+        "brand": {
+          "id": 107,
+          "name": "나이키",
+          "description": "NIKE(나이키)는 토탈 라이프스타일 브랜드로 이미 세계 1위 브랜드로 자리 잡았으며, 다양한 아티스트와 브랜드들과의 컬래버레이션으로 많은 분야에서 활동하며 압도적인 신발 판매량과 더불어 두터운 마니아층을 갖고 있는 브랜드입니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "0b3d9e3e-7459-4f84-b1df-a019aff853b1",
+          "originalWidth": 1000,
+          "originalHeight": 1000,
+          "__type__": "Picture"
+        },
+        "badges": ["free_delivery"]
+      },
+      {
+        "__type__": "GoodsOverview",
+        "status": "normal",
+        "id": 759658,
+        "name": "푸마 TG 캐주얼 티 여름티셔츠 반팔티 3종 택1",
+        "likeCount": 6932,
+        "reviewsCount": 98,
+        "price": 16500,
+        "priceOriginal": 21000,
+        "discountRate": 21,
+        "isDiscounted": true,
+        "brand": {
+          "id": 1808,
+          "name": "푸마",
+          "description": "PUMA(푸마)는 다즐러에 의해 독일에서 만들어진 세계적인 스포츠 브랜드입니다. 현재는 토털 라이프스타일 브랜드로, 높은 퀄리티와 다양한 디자이너와의 콜라보레이션으로 세계적으로 많은 사랑을 받고 있습니다.",
+          "__type__": "BrandOverview"
+        },
+        "picture": {
+          "id": "308e660b-666f-4a06-8bc9-55c5e347e2d7",
+          "originalWidth": 600,
+          "originalHeight": 600,
+          "__type__": "Picture"
+        },
+        "badges": []
+      }
+    ]

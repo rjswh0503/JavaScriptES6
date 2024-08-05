@@ -1,0 +1,8 @@
+document = html문서
+. = 의
+getElementById = html 요소를 가져와라 id가 hello인 
+
+innerHTML = HTML 안에
+
+
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Animal{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+
+            }
+
+            speak(){
+                console.log('동물이 소리를 냅니다.');
+            }
+        }
+
+        var animals = new Animal();
+
+            animals.speak();
+
+
+            class Dog extends Animal{
+                constructor(name,age,breed){
+                    super(name,age);
+                    this.breed = breed;
+                }
+                speak(){
+                    console.log('강아지가 멍멍 짖습니다.')
+                }
+                info(){
+                    console.log("이름: " + this.name + "," + "나이: " + this.age +"," + "품종:" + this.breed);
+                }
+                
+            }
+
+            
+            
+
+            class Cat extends Animal {
+                constructor(name,age,color){ 
+                    super(name,age);
+                    this.color = color;
+                }
+                speak(){
+                    console.log('고양이가 야옹 거립니다.');
+                }
+                info(){
+                    console.log("이름: " + this.name + "," + "나이: " + this.age +"," + "색상:" + this.color);
+
+                }
+
+            }
+            var dog = new Dog("웅이",10,"말티즈");
+            var cat = new Cat("야옹이",5,"white");
+
+            dog.info();
+            dog.speak();
+            
+            
+            cat.info();
+            cat.speak();
+
+
+            // 실습문제 차량관리 시스템
+
+            class Vehicle {
+                constructor(make, model, year){
+                    this.make = make;
+                    this.model = model;
+                    this.year = year;
+                }
+                displayInfo(){
+                    console.log(`제조사:${this.make}, 모델:${this.model}, 연도:${this.year}`);
+                }
+
+            }
+
+            class Car extends Vehicle{
+                constructor(make, model, year, numDoors){
+                    super(make, model, year);
+                    this.numDoors = numDoors;
+                }
+
+                displayInfo(){
+                    console.log(`제조사:${this.make}, 모델:${this.model}, 연도:${this.year}, 문의 개수:${this.numDoors}`);
+                }
+
+            }
+
+            class ElectricCar extends Car{
+                constructor(make, model, year, numDoors, batteryCapacity){
+                    super(make, model, year, numDoors);
+                    this.batteryCapacity = batteryCapacity;
+                }
+
+                displayInfo(){
+                    console.log(`제조사:${this.make}, 모델:${this.model}, 연도:${this.year}, 문의 개수:${this.numDoors}개, 배터리 용량: ${this.batteryCapacity}kWh`);
+                }
+
+            }
+
+
+            var vehicle = new Vehicle("현대","캐스퍼",2022);
+            var car = new Car("기아","k9",2023,4);
+            var electric = new ElectricCar("테슬라","모델3",2021,4,23000);
+
+            vehicle.displayInfo();
+            car.displayInfo();
+            electric.displayInfo();
+
+
+
+            class Book{
+                constructor(title, author, year){
+                    this.title = title;
+                    this.author = author;
+                    this.year = year;
+                }
+                displayInfo(){
+                    console.log(`제목:${this.title}, 저자:${this.author}, 출판 연도:${this.year}`);
+                }
+            }
+
+            class Ebook extends Book{
+                constructor(title, author, year,fileSize, format){
+                    super(title, author, year);
+                    this.fileSize = fileSize;
+                    this.format = format;
+
+                }
+
+                displayInfo(){
+                    console.log(`제목:${this.title}, 저자:${this.author}, 출판 연도:${this.year}, 파일 크기: ${this.fileSize}MB, 형식: ${this.format}`);   
+                }
+
+            }
+
+            class AudioBook extends Book{
+                constructor(title, author, year, duration, narrator){
+                    super(title, author, year);
+                    this.duration = duration;
+                    this.narrator = narrator; 
+                }
+
+                displayInfo(){
+                    super.displayInfo();
+                    console.log(`길이:${this.duration}시간, 내레이터:${this.narrator}`);
+                }
+            }
+
+
+            var book = new Book("아이언맨: 리부트","마블코믹스",2016);
+            var ebook = new Ebook("시빌워: 아이언맨","마블코믹스",2019,255,"pdf");
+            var audiobook = new AudioBook("셜록홈즈","아서 도일",1880,2,"나 자신");
+
+            book.displayInfo();
+            ebook.displayInfo();
+            audiobook.displayInfo();
+
+
+
+
+            function Student2(name,age){
+                this.age = age;
+                this.name = name;
+                this.sayHi = function(){
+                    console.log(`안녕 나는 ${name}이고, 나이는 ${age}야 `)
+                }
+            }
+            
+            var student1 = new Student2("신재헌",32);
+            var student2 = new Student2("재헌신",31);
+
+            student1.sayHi();
+            student2.sayHi();
+
+
+
+
+
+
+            
+            
+            
+
+
+
+            
+
+    </script>
+    
+</body>
+</html>

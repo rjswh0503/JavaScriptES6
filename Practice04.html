@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" style="display: flex; justify-content: center; margin-top: 300px;">
+        <div id="name">
+            사용자이름 : <input type="text">
+        </div>
+        
+    </div>
+    <div id="save-btn" style="display: flex; justify-content: center; margin-top: 50px;">
+        <button type="submit">저장하기</button>
+    </div>
+
+    <div class="save-name">
+        
+
+    </div>
+    
+
+    <script>
+        
+        $('#save-btn').on('click', function(){
+            var userName = $('input').val();
+            localStorage.setItem('name',userName)
+            console.log(localStorage.setItem('name',userName));
+            
+            var name = localStorage.getItem('name');
+
+            if(name == userName){
+                var 템플릿 = `
+                    <div>
+                        <p>${name}</p>
+                        </div>
+                
+                `
+
+                $('.save-name').append(템플릿);
+            }
+            
+            
+
+            console.log(localStorage.getItem('name'));
+        });
+
+        
+
+           
+
+
+
+
+
+        
+
+        
+
+    </script>
+</body>
+</html>

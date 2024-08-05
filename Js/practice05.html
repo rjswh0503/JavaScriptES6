@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./practice05.css">
+</head>
+<body>
+    <h2>상품 리스트</h2>
+    <div class="btn-container">
+        <div class="price">
+            <button class="btn btn-success">최저가격순</button>
+        </div>
+        <div class="price2">
+            <button class="btn btn-success">최고가격순</button>
+        </div>
+        <div class="name">
+            <button class="btn btn-success">이름정렬</button>
+        </div>
+        
+    </div>
+    <div class="select-container">
+        <select class="select-main">
+            <option>선택하세요</option>
+            <option>낮은가격순</option>
+            <option>높은가격순</option>
+            <option>낮은리뷰순</option>
+            <option>높은리뷰순</option>
+        </select>
+
+    </div>
+    <div class="container">
+        
+
+    </div>
+
+
+    <script>
+
+        var products = [
+            {id: 0, name: '개사료', price: 30000},
+            {id: 1, name: '고양이사료', price: 35000},
+            {id: 2, name: '파충류사료', price: 40000},
+        ]
+
+
+        $('.select-main').on("input", function(){
+            $.get('./practice.json').done(function(data4){
+                var value = $('.select-main').eq(0).val();
+
+                if(value == '낮은가격순'){
+                    data4.sort(function(a,b){
+                        return a.price - b.price;
+                    })
+
+                }else if (value == '높은가격순'){
+                    data4.sort(function(a,b){
+                        return b.price - a.price;
+                    })
+                } else if (value == '낮은리뷰순'){
+                    data4.sort(function(a,b){
+                        return a.reviewsCount - b.reviewsCount;
+                    })
+                } else if (value == '높은리뷰순'){
+                    data4.sort(function(a,b){
+                        return b.reviewsCount - a.reviewsCount;
+                    })
+                } 
+
+                $('.container').html('');
+
+
+                data4.forEach((a, i) => {
+                    var 템플릿 = `
+                    <div class="col-sm-5 main-container">
+                    <img src="https://via.placeholder.com/600" class="w-100">
+                    <h5>${data4[i].name}</h5>
+                    <p>가격: ${data4[i].price}</p>
+                    <p> ${data4[i].brand.description}</p>
+                    <p>리뷰: ${data4[i].reviewsCount}</p>
+                    </div>
+                `
+
+                $('.container').append(템플릿);
+                })
+
+                
+            })
+        })
+
+
+
+        $.get('./practice.json').done(function(data){
+            
+               data.forEach((a, i) => {
+                var 템플릿 = `
+                <div class="col-sm-5 main-container">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${data[i].name}</h5>
+                <p>가격: ${data[i].price}</p>
+                <p> ${data[i].brand.description}</p>
+                <p>리뷰: ${data[i].reviewsCount}</p>
+                </div>
+                `
+
+                $('.container').append(템플릿);
+                
+               });
+
+        });
+
+
+        $('.price').click(function(){
+            $.get('./practice.json').done(function(data1){
+                data1.sort(function(a,b){
+                    return a.price - b.price;
+
+                });
+                $('.container').html('');
+
+                data1.forEach((a,i) => {
+                    var 템플릿 = `
+                <div class="col-sm-5 main-container">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${data1[i].name}</h5>
+                <p>${data1[i].price}</p>
+                <p>${data1[i].brand.description}</p
+                </div>
+            `
+
+                $('.container').append(템플릿);
+            
+                })
+            
+            })
+
+        });
+
+
+        $('.price2').click(function(){
+            $.get('./practice.json').done(function(data2){
+                data2.sort(function(a, b){
+                    return b.price - a.price;
+                });
+
+                $('.container').html('');
+
+                data2.forEach((a, i ) => {
+                    var 템플릿 = `
+
+                        <div class="col-sm-5 main-container">
+                        <img src="https://via.placeholder.com/600" class="w-100">
+                        <h5>${data2[i].name}</h5>
+                        <p>${data2[i].price}</p>
+                        <p>${data2[i].brand.description}</p>
+                        </div>
+                        `
+
+                        $('.container').append(템플릿);
+                })
+            })
+        })
+
+
+        $('.name').click(function(){
+            $.get('./practice.json').done(function(data3){
+                data3.sort(function(a, b){
+                    return b - a;
+                })
+
+
+                $('.container').html('');
+
+
+                data3.forEach((a,i) => {
+                 var 템플릿 = 
+                 `
+                  <div class="col-sm-5 main-container">
+                        <img src="https://via.placeholder.com/600" class="w-100">
+                        <h5>${data3[i].name}</h5>
+                        <p>${data3[i].price}</p>
+                        <p>${data3[i].brand.description}</p>
+                        </div>
+                 
+                 `
+
+                 $('.container').append(템플릿);
+                })
+
+
+            })
+        })
+
+
+        
+
+            
+               
+            
+
+           
+                
+           
+        
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

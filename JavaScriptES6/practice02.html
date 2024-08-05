@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // class 실습문제 1
+
+        class 강아지 {
+            constructor(type, color){
+                this.type = type;
+                this.color = color;
+            }
+            한살먹기(){
+                 return '나이가 없습니다.';
+
+            }
+        }
+
+        var 강아지1 = new 강아지('말티즈','white');
+        var 강아지2 = new 강아지('진돗개','brown');
+
+        console.log(강아지1);
+        console.log(강아지2);
+
+        강아지1.한살먹기();
+        강아지2.한살먹기();
+
+        // class 실습문제 2
+        class 고양이 extends 강아지 {
+            constructor(type,color,age){
+                super(type,color);
+                this.age = age;
+            }
+            get 한살먹기(){
+                return this.age + 1
+            }
+            
+             set setAge(나이){
+                this.age = 나이;
+            }
+             
+        }
+
+        var 고양이1 = new 고양이('코숏','white',5);
+        var 고양이2 = new 고양이('러시안블루','brown',2);
+
+        console.log(고양이1);
+        console.log(고양이2);
+
+        고양이1.한살먹기;
+        고양이2.한살먹기;
+
+        고양이1.setAge = 10;
+        고양이2.setAge = 20;
+
+
+        // 실습문제 3 Getter Setter
+
+        
+        class Unit {
+            constructor(){  
+                this.공격력 = 5;
+                this.체력 = 100;
+            }
+            get battlePoint(){
+                return this.공격력 + this.체력;
+            }
+            set heal(체력속성){
+                this.체력 = this.체력 + 체력속성;
+            }
+
+        }
+            var unit1 = new Unit();
+
+            console.log(unit1.battlePoint);
+            unit1.heal = 50;
+            
+
+
+
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
