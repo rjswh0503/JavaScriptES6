@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <custom-input name="아이디"></custom-input><br>
+    <custom-input></custom-input>
     
     <script>
         
@@ -130,7 +133,26 @@
         출석부2.delete('Json') // 삭제하기
         */
 
-        
+        // 커스텀태그로 길고 복잡한 HTML 축약하는 법
+
+        class 클래스 extends HTMLElement {
+            connectedCallback(){
+                let name = this.getAttribute('name');
+                this.innerHTML = `<label>${name}인풋입니다.</label><input>`
+            }
+
+            static get observedAttributes(){
+                return ['name']
+            }
+            attributeChangedCallback(){
+                console.log(this.getAttribute('name'));
+            }
+
+        }
+
+        customElements.define('custom-input', 클래스);
+
+
 
 
     </script>
